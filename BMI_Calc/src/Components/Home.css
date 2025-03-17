@@ -1,0 +1,126 @@
+.home-container{
+    max-width: 400px;
+    max-height: 100vh;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #333
+}
+
+.dark .home-container{
+    background-color: #333;
+    color: white;
+}
+
+.home-container h1{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.dark .home-container h1{
+    color: white;
+}
+
+.home-container label{
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+
+}
+
+.dark .home-container label {
+    color: #ddd;
+}
+
+.home-container input[type='number']{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    color: white;
+}
+
+.dark .home-container input[type='number'] {
+    background-color: #444;
+    color: white;
+    border: 1px solid #888;
+}
+
+.home-container button{
+    padding:  10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+
+
+.home-container button[type='submit']{
+    background-color: #007bff;
+    color: white;
+    margin-right:10px ;
+    margin-top: 8px;
+    
+}
+
+.dark .home-container button[type='submit'] {
+    background-color: #0056b3;
+}
+
+.home-container button[type='button']{
+    background-color: #f44336;
+    color: white;
+}
+
+.dark .home-container button[type='button'] {
+    background-color: #b32d1e;
+}
+
+
+.home-container button:hover{
+    opacity: 0.9;
+}
+
+.result{
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e7f3ff;
+    color: #333;
+}
+
+.dark .result {
+    background-color: #222;
+    color: white;
+}
+
+.dark .result h2 {
+    color: #0099ff;
+}
+
+.result h2{
+    font-size: 22px;
+    color: #007bff;
+}
+
+.result p{
+    font-size: 18px;
+    color: #333;
+}
+
+.dark .result p {
+    color: white;
+}
