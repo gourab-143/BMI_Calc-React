@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Home.css';
+//import './Home.css';
+import '../styles/Home.css'
 
 
 const Home = () => {
@@ -10,6 +11,13 @@ const Home = () => {
 
   const calculateBMI = (e) => {
     e.preventDefault();
+
+    // if (!weight || !height || height <= 0) {
+    //   setMessage('Please enter valid values.');
+    //   setBmi(null);
+    //   return;
+    // }
+
     const bmiValue = (weight / (height * height)).toFixed(2);
     setBmi(bmiValue);
     getMessage(bmiValue);
@@ -51,19 +59,19 @@ const Home = () => {
 
   return (
     <>
-      <div className='home-container'>
-        <h1>BMI Calculator</h1>
+      {/* <div className='home-container'>
+        <h1 className='title'>BMI Calculator</h1>
 
-        <form onSubmit={calculateBMI}>
+        <form onSubmit={calculateBMI} className='bmi-form'>
           <label>Weight (kg)</label>
-          <input
+          <input 
             type='number'
             value={weight}
             placeholder='Enter your weight in kg'
             onChange={(e) => setWeight(Number(e.target.value))}
           />
           <label>Height (m)</label>
-          <input
+          <input 
             type='number'
             value={height}
             placeholder='Enter your height in metres'
@@ -79,7 +87,51 @@ const Home = () => {
             <p>{message}</p>
           </div>
         )}
-      </div>
+      </div> */}
+
+<div className='home-container'>
+      <h1 className='title'>BMI Calculator</h1>
+
+      <form onSubmit={calculateBMI} className='bmi-form'>
+        <fieldset>
+          <legend>Enter Your Details</legend>
+
+          <div className='input-group'>
+            <label htmlFor='weight'>Weight (kg):</label>
+            <input
+              id='weight'
+              type='number'
+              value={weight}
+              placeholder='Enter weight in kg'
+              onChange={(e) => setWeight(parseFloat(e.target.value) || '')}
+            />
+          </div>
+
+          <div className='input-group'>
+            <label htmlFor='height'>Height (m):</label>
+            <input
+              id='height'
+              type='number'
+              value={height}
+              placeholder='Enter height in meters'
+              onChange={(e) => setHeight(parseFloat(e.target.value) || '')}
+            />
+          </div>
+
+          <div className='btn-group'>
+            <button type='submit' className='calculate-btn'>Calculate</button>
+            <button type='button' onClick={resetForm} className='reset-btn'>Reset</button>
+          </div>
+        </fieldset>
+      </form>
+
+      {bmi && (
+        <div className='result-container'>
+          <h2>Your BMI: <span className='bmi-value'>{bmi}</span></h2>
+          <p className='bmi-message'>{message}</p>
+        </div>
+      )}
+    </div>
 
       
     </>

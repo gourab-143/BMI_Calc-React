@@ -1,0 +1,94 @@
+.about-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.about-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.about-warning {
+  background-color: #fff3cd;
+  border-left: 4px solid #ff9900;
+}
+
+.bmi-formula {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 15px;
+  background: #eef7ff;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.bmi-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.bmi-table th, .bmi-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.bmi-table th {
+  background: #333;
+  color: white;
+}
+
+/* Dark Mode */
+.dark .about-container {
+  background-color: #333;
+  color: white;
+}
+
+.dark .about-card {
+  background: #444;
+  color: white;
+}
+
+.dark .bmi-table th {
+  background: #222;
+}
+
+.dark .bmi-table td {
+  background: #555;
+}
+
+.dark .about-warning {
+  background-color: #553c2d;
+  border-left: 4px solid #ff8800;
+}

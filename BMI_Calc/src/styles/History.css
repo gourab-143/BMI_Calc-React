@@ -1,0 +1,125 @@
+/* General Container */
+.history-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+.dark .history-container {
+    background-color: #222;
+    color: #f9f9f9;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Heading */
+.history-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.dark .history-container h1 {
+    color: #ddd;
+}
+
+/* History List */
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* Individual List Items */
+.list-group-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode List Items */
+.dark .list-group-item {
+    background: #2d2d2d;
+    color: white;
+}
+
+/* Alternate Row Styling */
+.list-group-item:nth-child(even) {
+    background: #eef1f4;
+}
+
+.dark .list-group-item:nth-child(even) {
+    background: #3a3a3a;
+}
+
+/* Delete Button */
+.btn-danger {
+    background-color: #e74c3c;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Dark Mode Delete Button */
+.dark .btn-danger {
+    background-color: #d9534f;
+}
+
+.dark .btn-danger:hover {
+    background-color: #b52b27;
+}
+
+/* No History Message */
+.no-history {
+    font-size: 1rem;
+    color: #666;
+    padding: 10px;
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.dark .no-history {
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .history-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .list-group-item {
+        flex-direction: column;
+        text-align: left;
+        padding: 12px;
+    }
+
+    .btn-danger {
+        margin-top: 8px;
+        width: 100%;
+    }
+}

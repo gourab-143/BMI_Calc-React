@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
-import './History.css';
+//import './History.css';
+import '../styles/History.css'
 
 const History = () => {
 
@@ -44,7 +45,7 @@ const handleDelete = (id)=>{
       <h1>History</h1>
       <ul className="list-group">
         {history.length === 0 ? (
-          <li className="list-group-item">No history available.</li>
+          <li className="list-group-item no-history">No history available.</li>
         ) : (
           history.map((history,index) => (
             <li key={history.ID || index} className="list-group-item d-flex justify-content-between align-items-center">
