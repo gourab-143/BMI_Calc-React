@@ -1,10 +1,12 @@
 
 
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import Navbar from './Navbar';
 import { Outlet } from 'react-router-dom';
 
+
 const Layout = () => {
+    
 
     const [mode, setMode] = useState('light');
 

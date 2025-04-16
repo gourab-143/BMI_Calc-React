@@ -12,7 +12,7 @@ import History from './Components/History';
 import Layout from './Components/Layout';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
-//import { AuthProvider } from './context/AuthContext';
+import { AuthProvider } from './context/AuthContext.jsx';
 
 
 const router = createBrowserRouter([
@@ -31,10 +31,18 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  // <React.StrictMode>
+  //   <RouterProvider router={router}>
+  //     <AuthProvider>
+  //       <App/>
+  //     </AuthProvider>
+  //   </RouterProvider>
+  // </React.StrictMode>
+
   <React.StrictMode>
- 
-      <RouterProvider router={router}/>
-    
-  </React.StrictMode>
+  <AuthProvider> {/* Wrap everything inside AuthProvider */}
+    <RouterProvider router={router} />
+  </AuthProvider>
+</React.StrictMode>
 );
 

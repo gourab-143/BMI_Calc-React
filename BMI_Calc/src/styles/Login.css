@@ -1,0 +1,89 @@
+/* Center the login box */
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--background);
+    color: var(--text-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Box styling (same as Signup) */
+  
+  h2 {
+    margin-bottom: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    font-size: 16px;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: var(--button-bg);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  .message {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .switch-link {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .switch-link a {
+    color: var(--button-bg);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .switch-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Dark Mode Support */
+  :root {
+    --background: #f8f9fa;
+    --text-color: #333;
+    --box-background: #fff;
+    --border-color: #ccc;
+    --input-background: #f9f9f9;
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+  }
+  
+  [data-theme="dark"] {
+    --background: #1a1a1a;
+    --text-color: #fff;
+    --box-background: #222;
+    --border-color: #555;
+    --input-background: #333;
+    --button-bg: #28a745;
+    --button-hover: #218838;
+  }
+  
